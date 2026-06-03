@@ -1,0 +1,131 @@
+/* ── contact.html 専用スタイル ── */
+
+/* ── 2カラムレイアウト ──────────────── */
+.contact-layout{
+  display:grid;
+  grid-template-columns:360px 1fr;
+  gap:48px;align-items:flex-start
+}
+
+/* ── 左：案内情報 ────────────────────── */
+.contact-info-title{
+  font-family:var(--serif);font-size:1.25rem;
+  font-weight:700;color:var(--navy);
+  margin-bottom:12px
+}
+.contact-info-lead{
+  font-size:.88rem;color:var(--tx-mid);
+  line-height:2;margin-bottom:28px
+}
+
+.contact-method{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px 0;border-bottom:1px solid var(--rule-w)
+}
+.contact-method:first-of-type{border-top:1px solid var(--rule-w)}
+.contact-method-icon{
+  flex-shrink:0;
+  width:40px;height:40px;border-radius:50%;
+  background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  margin-top:2px
+}
+.contact-method-icon i{color:var(--gold);font-size:.9rem}
+.contact-method-label{
+  font-size:.72rem;color:var(--tx-muted);
+  letter-spacing:.05em;margin-bottom:4px
+}
+.contact-tel{
+  font-family:var(--serif);font-size:1.5rem;
+  font-weight:700;color:var(--navy);
+  letter-spacing:.03em;display:block;line-height:1.3
+}
+.contact-tel:hover{color:var(--gold)}
+.contact-tel-hrs{
+  font-size:.75rem;color:var(--tx-muted);
+  margin-top:3px
+}
+.contact-method-val{
+  font-size:.88rem;color:var(--tx-mid);
+  line-height:1.9
+}
+
+/* よくあるご相談 */
+.contact-faq{
+  margin-top:24px;
+  background:var(--navy);border-radius:4px;
+  padding:20px 20px
+}
+.contact-faq-title{
+  font-family:var(--serif);font-size:.88rem;
+  font-weight:700;color:#fff;
+  margin-bottom:14px;
+  display:flex;align-items:center;gap:8px
+}
+.contact-faq-title i{color:var(--gold-lt)}
+
+/* FAQ アコーディオン風アイテム */
+.faq-item{
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding:10px 0
+}
+.faq-item:last-child{border-bottom:none}
+.faq-q{
+  font-size:.82rem;font-weight:600;
+  color:rgba(255,255,255,.9);
+  display:flex;align-items:flex-start;gap:8px;
+  margin-bottom:6px;line-height:1.6
+}
+.faq-q i{
+  color:var(--gold-lt);font-size:.7rem;
+  margin-top:4px;flex-shrink:0
+}
+.faq-a{
+  font-size:.78rem;color:rgba(255,255,255,.6);
+  line-height:1.85;
+  padding-left:16px;
+  border-left:2px solid rgba(200,150,60,.35)
+}
+
+/* ── プライバシーポリシーノート ─────── */
+.privacy-note{
+  margin-top:16px;
+  background:var(--ivory);border:1px solid var(--rule-w);
+  border-radius:4px;padding:16px 18px
+}
+.privacy-note h4{
+  font-size:.8rem;font-weight:700;color:var(--navy);
+  display:flex;align-items:center;gap:7px;margin-bottom:7px
+}
+.privacy-note p{font-size:.78rem;color:var(--tx-muted);line-height:1.85}
+
+/* ── Google Map ───────────────────── */
+.contact-map{
+  margin-top:24px;margin-bottom:4px
+}
+.contact-map-title{
+  font-family:var(--serif);font-size:.9rem;
+  font-weight:700;color:var(--navy);
+  display:flex;align-items:center;gap:8px;
+  margin-bottom:10px
+}
+.contact-map-title i{color:var(--gold);font-size:1rem}
+.contact-map-frame{
+  border-radius:6px;overflow:hidden;
+  border:1px solid var(--rule-w);
+  box-shadow:0 4px 16px rgba(27,42,74,.08)
+}
+.contact-map-addr{
+  font-size:.78rem;color:var(--tx-mid);
+  margin-top:8px;line-height:1.6
+}
+
+/* ── レスポンシブ ──────────────────── */
+@media(max-width:860px){
+  .contact-layout{
+    grid-template-columns:1fr;gap:32px
+  }
+}
+@media(max-width:520px){
+  .contact-tel{font-size:1.25rem}
+}

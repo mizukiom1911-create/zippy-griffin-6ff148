@@ -1,0 +1,482 @@
+/* ── トップページ専用スタイル ── */
+
+/* ── ヒーロー内 屋号ブランド表示 ──────── */
+.hero-brand{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:24px;
+  max-width:fit-content
+}
+.hero-brand-logo{
+  height:52px;width:auto;flex-shrink:0;
+  border-radius:3px;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.4))
+}
+.hero-brand-text{
+  display:flex;flex-direction:column;gap:3px
+}
+.hero-brand-name{
+  font-family:var(--serif);
+  font-size:clamp(1.2rem,2.4vw,1.6rem);
+  font-weight:700;color:#fff;
+  letter-spacing:.08em;line-height:1.2;
+  text-shadow:0 1px 8px rgba(0,0,0,.5)
+}
+.hero-brand-ruby{
+  font-size:.58rem;color:var(--gold-lt);
+  letter-spacing:.24em;text-transform:uppercase;
+  text-shadow:0 1px 4px rgba(0,0,0,.4)
+}
+
+/* ヒーロー ── フルスクリーン背景写真スタイル */
+#hero{
+  min-height:100svh;
+  display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+  background:#0d1e3a
+}
+/* 背景写真レイヤー */
+#hero::after{
+  content:'';
+  position:absolute;inset:0;
+  background-image:url('../img/hero-bg.jpg');
+  background-size:cover;
+  background-position:20% center;
+  opacity:.42;
+  z-index:0
+}
+/* 温かみのあるグラデーションオーバーレイ */
+#hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    linear-gradient(
+      to right,
+      rgba(10,22,48,.88) 0%,
+      rgba(14,28,58,.72) 50%,
+      rgba(18,34,68,.45) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.1) 0%,
+      transparent 40%,
+      rgba(10,18,40,.6) 100%
+    );
+  z-index:1;pointer-events:none
+}
+.hero-body{
+  flex:1;display:flex;align-items:center;
+  max-width:var(--wrap);margin:0 auto;
+  padding:100px 24px 48px;width:100%;
+  gap:52px;
+  position:relative;z-index:2
+}
+.hero-text{flex:1;min-width:0}
+
+/* 受賞・実績バッジ */
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.68rem;
+  color:rgba(255,255,255,.55);
+  letter-spacing:.1em;margin-bottom:20px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  padding:6px 14px;border-radius:20px;
+  backdrop-filter:blur(6px)
+}
+.hero-badge-tag{
+  background:var(--gold);color:#fff;
+  font-size:.6rem;font-weight:700;
+  padding:2px 10px;border-radius:20px;letter-spacing:.1em
+}
+
+/* メインコピー */
+.hero-h1{
+  font-family:var(--serif);
+  font-size:clamp(1.9rem,4.2vw,3rem);
+  font-weight:700;color:#fff;line-height:1.45;
+  letter-spacing:.04em;margin-bottom:20px;
+  text-shadow:0 2px 16px rgba(0,0,0,.45)
+}
+.hero-h1 em{
+  font-style:normal;
+  color:var(--gold-lt);
+  display:block;
+  position:relative;
+  padding-left:0
+}
+
+/* サブコピー */
+.hero-desc{
+  font-size:clamp(.88rem,1.8vw,.95rem);
+  color:rgba(255,255,255,.72);
+  line-height:2.1;margin-bottom:32px;
+  text-shadow:0 1px 6px rgba(0,0,0,.3)
+}
+
+/* サービスタグ一覧 */
+.hero-tags{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-bottom:28px
+}
+.hero-tags span{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;
+  color:rgba(255,255,255,.85);
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  padding:5px 12px;border-radius:20px;
+  letter-spacing:.03em;
+  backdrop-filter:blur(4px)
+}
+.hero-tags span i{
+  color:var(--gold-lt);font-size:.65rem
+}
+
+/* CTAボタングループ */
+.hero-btns{
+  display:flex;flex-wrap:wrap;gap:14px;
+  margin-bottom:20px
+}
+.hero-btns .btn-gold{
+  font-size:1rem;
+  padding:16px 32px;
+  border-radius:4px;
+  box-shadow:0 6px 24px rgba(200,150,60,.45),0 2px 8px rgba(0,0,0,.3);
+  letter-spacing:.04em;
+  transition:transform .22s,box-shadow .22s,background .22s
+}
+.hero-btns .btn-gold:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 32px rgba(200,150,60,.55),0 4px 12px rgba(0,0,0,.3)
+}
+.hero-btns .btn-tel{
+  font-size:.92rem;
+  padding:16px 28px;
+  border-radius:4px;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.25);
+  color:#fff;
+  backdrop-filter:blur(6px);
+  transition:background .22s,border-color .22s,transform .22s
+}
+.hero-btns .btn-tel:hover{
+  background:rgba(255,255,255,.18);
+  border-color:rgba(255,255,255,.45);
+  transform:translateY(-2px)
+}
+
+/* 電話番号小テキスト */
+.hero-tel{
+  font-size:.75rem;color:rgba(255,255,255,.4);
+  display:flex;align-items:center;gap:6px
+}
+
+/* 右カラム：写真2枚 */
+.hero-imgs{
+  flex:0 0 44%;max-width:440px;
+  display:flex;flex-direction:column;gap:12px;
+  position:relative;z-index:2
+}
+.hero-img-main{
+  border-radius:8px;overflow:hidden;
+  aspect-ratio:3/4;
+  box-shadow:0 20px 56px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.06)
+}
+.hero-img-main img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s ease
+}
+.hero-img-main:hover img{transform:scale(1.03)}
+.hero-img-sub{
+  border-radius:8px;overflow:hidden;
+  aspect-ratio:16/7;
+  box-shadow:0 10px 28px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.05)
+}
+.hero-img-sub img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s ease
+}
+.hero-img-sub:hover img{transform:scale(1.03)}
+
+/* スクロール誘導 */
+.hero-scroll{
+  text-align:center;padding:20px 0 28px;
+  font-size:.56rem;letter-spacing:.24em;
+  color:rgba(255,255,255,.28);
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  animation:bounce 2.4s infinite;
+  position:relative;z-index:2
+}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+
+/* ── サービス概要（トップ）────────────── */
+.svc-index-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px
+}
+.svc-card{
+  background:var(--white);border:1px solid var(--rule);
+  border-radius:4px;padding:28px 22px;
+  transition:transform .25s,box-shadow .25s;
+  position:relative;overflow:hidden
+}
+.svc-card::after{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--navy),var(--gold));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .25s
+}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(27,42,74,.1)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-icon{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--navy);display:flex;
+  align-items:center;justify-content:center;
+  margin-bottom:16px
+}
+.svc-icon i{color:var(--gold);font-size:1.1rem}
+.svc-card h3{
+  font-family:var(--serif);font-size:.96rem;
+  font-weight:700;color:var(--navy);margin-bottom:8px
+}
+.svc-card p{
+  font-size:.82rem;color:var(--tx-mid);
+  line-height:1.85;margin-bottom:14px
+}
+.svc-more{
+  font-size:.78rem;color:var(--navy-mid);font-weight:600;
+  display:inline-flex;align-items:center;gap:5px;
+  transition:gap .2s,color .2s
+}
+.svc-more:hover{gap:8px;color:var(--gold)}
+.svc-all-btn{text-align:center;margin-top:40px}
+
+/* ── 対象業種（トップ）──────────────── */
+.target-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px
+}
+.target-card{
+  background:var(--cream);border:1px solid var(--rule-w);
+  border-radius:4px;padding:24px 18px;text-align:center;
+  transition:transform .25s,box-shadow .25s,border-color .25s
+}
+.target-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(27,42,74,.09);
+  border-color:var(--gold)
+}
+.target-card>i{
+  font-size:1.6rem;color:var(--gold);
+  display:block;margin-bottom:10px
+}
+.target-card h3{
+  font-family:var(--serif);font-size:.9rem;
+  font-weight:700;color:var(--navy);margin-bottom:6px
+}
+.target-card p{font-size:.78rem;color:var(--tx-mid);line-height:1.75}
+
+/* ── 写真ギャラリー帯 ────────────────── */
+.photo-strip{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0
+}
+.photo-strip-item{
+  aspect-ratio:4/3;overflow:hidden;
+  background:var(--navy-pale)
+}
+.photo-strip-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s ease
+}
+.photo-strip-item:hover img{transform:scale(1.05)}
+
+/* ── CTAバナー ────────────────────────── */
+.cta-band{
+  background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 100%);
+  padding:64px 24px;text-align:center
+}
+.cta-band h2{
+  font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);
+  font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:.06em
+}
+.cta-band p{
+  font-size:.9rem;color:rgba(255,255,255,.6);
+  margin-bottom:28px
+}
+.cta-tel-btn{
+  display:inline-flex;align-items:center;gap:14px;
+  background:var(--gold);color:#fff;
+  padding:18px 40px;border-radius:4px;
+  box-shadow:0 6px 20px rgba(200,150,60,.38);
+  transition:background .25s,transform .25s;margin-bottom:10px
+}
+.cta-tel-btn:hover{
+  background:var(--gold-lt);color:var(--navy-deep);
+  transform:translateY(-2px)
+}
+.cta-tel-btn i{font-size:1.3rem}
+.cta-tel-num{
+  font-family:var(--serif);
+  font-size:clamp(1.4rem,4vw,1.8rem);
+  font-weight:700;letter-spacing:.05em;display:block;line-height:1.2
+}
+.cta-tel-hrs{
+  font-size:.7rem;opacity:.75;display:block;
+  letter-spacing:.04em
+}
+.cta-sub{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:12px;margin-top:16px
+}
+
+/* ── レスポンシブ（トップ専用）────────── */
+@media(max-width:860px){
+  /* ヒーロー：縦積みに */
+  .hero-body{
+    flex-direction:column;
+    padding:88px 20px 36px;
+    gap:32px
+  }
+  .hero-text{width:100%}
+
+  /* ブランド */
+  .hero-brand{max-width:100%}
+  .hero-brand-logo{height:44px}
+  .hero-brand-name{font-size:1.2rem}
+
+  /* H1：タブレットは少し小さく */
+  .hero-h1{font-size:clamp(1.5rem,4.5vw,2rem)}
+  /* タブレットでは強制改行不要 */
+  .hero-h1-br{display:none}
+
+  /* サブコピー */
+  .hero-desc{font-size:.88rem;line-height:1.9}
+
+  /* サービスタグ */
+  .hero-tags span{font-size:.68rem;padding:4px 10px}
+
+  /* CTAボタン */
+  .hero-btns{flex-direction:column;gap:10px}
+  .hero-btns .btn{width:100%;justify-content:center;font-size:.92rem;padding:15px 20px}
+
+  /* 右カラム写真 */
+  .hero-imgs{
+    max-width:100%;flex:none;width:100%;
+    flex-direction:row;gap:8px
+  }
+  .hero-img-main{flex:1;aspect-ratio:4/3}
+  .hero-img-sub{flex:1;aspect-ratio:4/3}
+
+  /* サービスグリッド */
+  .svc-index-grid{grid-template-columns:1fr 1fr}
+
+  /* 対象業種 */
+  .target-grid{grid-template-columns:1fr 1fr}
+
+  /* フォトストリップ */
+  .photo-strip{grid-template-columns:1fr 1fr}
+  .photo-strip-item:last-child{display:none}
+
+  /* 強み */
+  .strength-item{gap:18px}
+  .str-num{font-size:1.6rem;min-width:38px}
+
+  /* 会社概要テザー */
+  .about-teaser-inner{
+    grid-template-columns:1fr;
+    gap:28px
+  }
+  .about-teaser-img{max-height:240px}
+}
+
+@media(max-width:520px){
+  /* ヒーロー：スマホ */
+  .hero-body{padding:80px 16px 28px;gap:24px}
+
+  /* H1：スマホは小さく、強制改行を活かす */
+  .hero-h1{font-size:1.45rem;line-height:1.5}
+  .hero-h1-br{display:inline}
+
+  /* 説明文 */
+  .hero-desc{font-size:.84rem}
+
+  /* タグは小さめに */
+  .hero-tags{gap:6px}
+  .hero-tags span{font-size:.64rem;padding:4px 8px}
+
+  /* 右カラム写真：スマホは縦積み */
+  .hero-imgs{flex-direction:column}
+  .hero-img-main{aspect-ratio:16/9}
+  .hero-img-sub{display:none} /* スマホはメインのみ */
+
+  /* グリッド */
+  .svc-index-grid{grid-template-columns:1fr}
+  .target-grid{grid-template-columns:1fr 1fr}
+  .photo-strip{grid-template-columns:1fr}
+  .photo-strip-item:last-child{display:block}
+
+  /* 強み */
+  .strength-item{flex-direction:column;gap:8px}
+  .str-num{font-size:1.4rem}
+}
+
+/* ── 強みリスト（ナンバリング形式）────── */
+.strength-list{
+  list-style:none;
+  display:flex;flex-direction:column;gap:0;
+  max-width:760px;margin:0 auto;
+  counter-reset:str
+}
+.strength-item{
+  display:flex;align-items:flex-start;gap:28px;
+  padding:28px 0;
+  border-bottom:1px solid var(--rule)
+}
+.strength-item:first-child{border-top:1px solid var(--rule)}
+.str-num{
+  flex-shrink:0;
+  font-family:var(--serif);font-size:2rem;font-weight:700;
+  color:var(--gold);letter-spacing:.02em;line-height:1;
+  min-width:46px
+}
+.str-body h3{
+  font-family:var(--serif);font-size:1.05rem;
+  font-weight:700;color:var(--navy);margin-bottom:8px
+}
+.str-body p{
+  font-size:.88rem;color:var(--tx-mid);line-height:1.95
+}
+
+/* ── 会社概要テザー（横2カラム）───────── */
+.about-teaser-inner{
+  display:grid;
+  grid-template-columns:1fr 400px;
+  gap:56px;align-items:center
+}
+.about-teaser-img{
+  border-radius:6px;overflow:hidden;
+  box-shadow:0 8px 32px rgba(27,42,74,.12)
+}
+.about-teaser-img img{
+  width:100%;height:100%;
+  object-fit:cover;display:block
+}
+
+@media(max-width:860px){
+  .strength-item{gap:18px}
+  .str-num{font-size:1.6rem;min-width:38px}
+  .about-teaser-inner{
+    grid-template-columns:1fr;
+    gap:28px
+  }
+  .about-teaser-img{max-height:240px}
+}
+@media(max-width:520px){
+  .strength-item{flex-direction:column;gap:8px}
+  .str-num{font-size:1.4rem}
+}

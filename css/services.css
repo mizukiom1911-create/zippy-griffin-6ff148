@@ -1,0 +1,144 @@
+/* ── services.html 専用スタイル ── */
+
+/* ── ご利用の流れ（3ステップ）──────── */
+.flow-steps{
+  list-style:none;
+  display:flex;align-items:center;
+  gap:0;justify-content:center;
+  flex-wrap:wrap;margin-bottom:40px
+}
+.flow-step{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:6px;padding:28px 22px;
+  text-align:center;flex:1;min-width:200px;max-width:260px;
+  position:relative
+}
+.flow-step:hover{
+  background:rgba(255,255,255,.1);
+  border-color:rgba(200,150,60,.4)
+}
+.flow-num{
+  font-family:var(--serif);font-size:.62rem;
+  letter-spacing:.18em;color:var(--gold-lt);
+  display:block;margin-bottom:10px;text-transform:uppercase
+}
+.flow-icon{
+  width:56px;height:56px;border-radius:50%;
+  background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 14px
+}
+.flow-icon i{color:#fff;font-size:1.3rem}
+.flow-step h3{
+  font-family:var(--serif);font-size:1.1rem;
+  font-weight:700;color:#fff;margin-bottom:10px
+}
+.flow-step p{
+  font-size:.82rem;color:rgba(255,255,255,.62);
+  line-height:1.85
+}
+.flow-arrow{
+  font-size:1.4rem;color:var(--gold);
+  padding:0 8px;flex-shrink:0
+}
+.flow-cta{text-align:center;margin-top:8px}
+
+/* ── サービス詳細（交互2カラム）──────── */
+.svc-detail-inner{
+  display:grid;
+  grid-template-columns:1fr 400px;
+  gap:60px;align-items:center
+}
+.svc-detail-rev{
+  direction:rtl
+}
+.svc-detail-rev>*{direction:ltr}
+
+.svc-detail-num{
+  display:block;
+  font-family:var(--serif);font-size:.68rem;
+  letter-spacing:.28em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:10px
+}
+.svc-detail-title{
+  font-family:var(--serif);
+  font-size:clamp(1.35rem,2.8vw,1.75rem);
+  font-weight:700;color:var(--navy);
+  margin-bottom:14px;letter-spacing:.04em;
+  line-height:1.5
+}
+.svc-detail-lead{
+  font-size:.93rem;color:var(--tx-mid);
+  line-height:2;margin-bottom:20px
+}
+.svc-detail-list{
+  list-style:none;margin-bottom:28px
+}
+.svc-detail-list li{
+  font-size:.88rem;color:var(--tx-mid);
+  display:flex;align-items:flex-start;gap:10px;
+  padding:7px 0;border-bottom:1px solid var(--rule)
+}
+.svc-detail-list li:first-child{border-top:1px solid var(--rule)}
+.svc-detail-list i{
+  color:var(--gold);margin-top:3px;flex-shrink:0
+}
+.svc-detail-img{
+  border-radius:6px;overflow:hidden;
+  box-shadow:0 10px 36px rgba(27,42,74,.12)
+}
+.svc-detail-img img{
+  width:100%;height:320px;
+  object-fit:cover;display:block
+}
+
+/* ── レスポンシブ ──────────────────── */
+/* ── 準備中プレースホルダー ─────────── */
+.svc-coming-soon{
+  width:100%;height:100%;min-height:240px;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:16px;
+  background:var(--ivory);
+  border:2px dashed var(--sand);
+  border-radius:6px;
+  color:var(--tx-muted)
+}
+.svc-coming-soon i{font-size:2.4rem;color:var(--sand)}
+.svc-coming-soon p{
+  font-family:var(--serif);font-size:1rem;
+  font-weight:700;letter-spacing:.12em;color:var(--tx-muted)
+}
+.badge-coming{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--sand);color:var(--tx-mid);
+  font-size:.72rem;font-weight:700;
+  padding:4px 12px;border-radius:20px;
+  letter-spacing:.08em;white-space:nowrap
+}
+
+@media(max-width:860px){
+  .flow-steps{gap:8px}
+  .flow-arrow{display:none}
+  .flow-step{min-width:160px;max-width:none;flex:1 1 160px}
+
+  /* スマホ：全セクション「テキスト上・画像下」に統一 */
+  .svc-detail-inner{
+    grid-template-columns:1fr;
+    gap:24px;
+    direction:ltr
+  }
+  .svc-detail-rev{direction:ltr}
+
+  /* 通常セクション：テキストが先に来るので自然にテキスト上 */
+  /* 逆順セクション（rev）：画像が先だったのをテキスト上に強制 */
+  .svc-detail-rev .svc-detail-img{order:2}
+  .svc-detail-rev .svc-detail-text{order:1}
+
+  .svc-detail-img img{height:220px}
+}
+@media(max-width:520px){
+  .flow-step{flex:1 1 100%;max-width:none}
+  .svc-detail-img img{height:200px;object-position:center top}
+}
