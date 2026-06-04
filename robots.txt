@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oumiyanagaoka.com/sitemap.xml
