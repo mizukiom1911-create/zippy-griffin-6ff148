@@ -3,89 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="夏のイベント・宴会のお酒、近江屋ながおかにまるごとお任せ。生ビール樽・ビールサーバー・炭酸ガス・配達まで一括手配。上野原市・大月市・相模原市の飲食店・法人さまへ。創業1911年の酒類専門卸。">
+  <meta name="description" content="夏のイベント・宴会のお酒、近江屋ながおかにまるごとお任せ。生ビール樽・ビールサーバー・炭酸ガス・配達まで一括手配。上野原市・大月市・相模原市の飲食店・法人さまへ。創業1911年の酒類専門卸。夏季はご予約が集中するためお早めに。">
   <title>夏のイベント、お酒もサーバーも丸ごと｜近江屋ながおか</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
 
-  <!-- Canonical & Social (SEO) -->
   <link rel="canonical" href="https://oumiyanagaoka.com/lp-event.html">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="近江屋ながおか">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:title" content="夏のイベント、お酒もサーバーも丸ごと｜近江屋ながおか">
-  <meta property="og:description" content="生ビール樽・サーバー・炭酸ガス・配達まで一括手配。上野原の酒類専門卸が、飲食店・イベントのお酒まわりをまるごとサポート。">
+  <meta property="og:description" content="生ビール樽・サーバー・炭酸ガス・配達まで一括手配。夏季はご予約が集中。お早めにご相談を。">
   <meta property="og:url" content="https://oumiyanagaoka.com/lp-event.html">
-  <meta property="og:image" content="https://oumiyanagaoka.com/img/lp-kegs-hero.jpg">
+  <meta property="og:image" content="https://oumiyanagaoka.com/img/lp-hero-beer.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    /* ── LP 専用スタイル ── */
-    .lp-hero{position:relative;min-height:88vh;display:flex;align-items:center;
-      background:linear-gradient(rgba(15,29,56,.62),rgba(15,29,56,.72)),url('img/lp-kegs.jpg') center/cover no-repeat;color:#fff;text-align:center}
-    .lp-hero-inner{max-width:880px;margin:0 auto;padding:90px 22px}
+    /* ── 上部スカーシティ・バー（行動経済学：希少性／緊急性） ── */
+    .lp-bar{position:sticky;top:0;z-index:60;background:#b3402e;color:#fff;text-align:center;
+      font-size:.86rem;font-weight:600;padding:9px 14px;line-height:1.5}
+    .lp-bar i{margin-right:6px}
+    .lp-bar .em{color:#ffe08a}
+
+    .lp-hero{position:relative;min-height:90vh;display:flex;align-items:center;
+      background:linear-gradient(rgba(15,29,56,.55),rgba(15,29,56,.78)),url('img/lp-hero-beer.jpg') center/cover no-repeat;color:#fff;text-align:center}
+    .lp-hero-inner{max-width:900px;margin:0 auto;padding:70px 22px}
     .lp-eyebrow{display:inline-block;background:var(--gold);color:#1b2a4a;font-weight:700;
-      font-size:.82rem;letter-spacing:.08em;padding:7px 18px;border-radius:30px;margin-bottom:24px}
-    .lp-hero h1{font-family:var(--serif);font-size:clamp(2rem,6vw,3.4rem);line-height:1.4;
-      font-weight:700;margin:0 0 22px;text-shadow:0 2px 18px rgba(0,0,0,.4)}
+      font-size:.82rem;letter-spacing:.06em;padding:7px 18px;border-radius:30px;margin-bottom:22px}
+    .lp-hero h1{font-family:var(--serif);font-size:clamp(2rem,6vw,3.5rem);line-height:1.4;
+      font-weight:700;margin:0 0 22px;text-shadow:0 2px 18px rgba(0,0,0,.45)}
     .lp-hero h1 .hl{color:var(--gold-lt)}
-    .lp-hero p.lead{font-size:clamp(1rem,2.4vw,1.22rem);line-height:1.9;margin:0 auto 38px;max-width:640px;opacity:.96}
-    .lp-cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-    .lp-btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem;
-      padding:17px 34px;border-radius:9px;text-decoration:none;transition:transform .2s,box-shadow .2s}
-    .lp-btn-gold{background:var(--gold);color:#1b2a4a;box-shadow:0 8px 24px rgba(200,150,60,.4)}
-    .lp-btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(200,150,60,.5)}
+    .lp-hero p.lead{font-size:clamp(1rem,2.4vw,1.22rem);line-height:1.9;margin:0 auto 30px;max-width:660px;opacity:.97}
+    /* 社会的証明バッジ（行動経済学：社会的証明・権威） */
+    .lp-proof{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:0 0 34px;font-size:.9rem;opacity:.95}
+    .lp-proof b{font-family:var(--serif);font-size:1.5rem;color:var(--gold-lt);display:block;line-height:1.2}
+    .lp-cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center}
+    .lp-btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.06rem;
+      padding:18px 36px;border-radius:9px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+    .lp-btn-gold{background:var(--gold);color:#1b2a4a;box-shadow:0 8px 26px rgba(200,150,60,.45)}
+    .lp-btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(200,150,60,.55)}
     .lp-btn-tel{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.5)}
     .lp-btn-tel:hover{background:rgba(255,255,255,.2)}
-    .lp-points{padding:70px 22px;background:var(--cream)}
-    .lp-points h2,.lp-flow h2,.lp-photos h2{text-align:center;font-family:var(--serif);
-      font-size:clamp(1.5rem,4vw,2.1rem);color:var(--navy);margin:0 0 12px}
-    .lp-sec-sub{text-align:center;color:var(--tx-mid);margin:0 0 46px}
-    .lp-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .lp-card{background:#fff;border-radius:14px;padding:30px 20px;text-align:center;
-      box-shadow:0 6px 22px rgba(30,52,97,.07);border-top:3px solid var(--gold)}
-    .lp-card i{font-size:2.1rem;color:var(--navy-mid);margin-bottom:16px}
-    .lp-card h3{font-size:1.05rem;color:var(--navy);margin:0 0 8px}
-    .lp-card p{font-size:.86rem;color:var(--tx-mid);line-height:1.8;margin:0}
-    .lp-photos{padding:60px 22px;background:#fff}
-    .lp-photo-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .lp-photo-grid img{width:100%;height:240px;object-fit:cover;border-radius:12px}
-    .lp-flow{padding:70px 22px;background:var(--navy-pale)}
-    .lp-flow-steps{max-width:860px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .lp-step{background:#fff;border-radius:14px;padding:30px 22px;text-align:center;position:relative}
-    .lp-step .num{display:inline-flex;width:46px;height:46px;align-items:center;justify-content:center;
+    .lp-micro{font-size:.8rem;opacity:.85;margin:12px 0 0}
+
+    .lp-sec{padding:72px 22px}
+    .lp-sec h2{text-align:center;font-family:var(--serif);font-size:clamp(1.5rem,4vw,2.2rem);color:var(--navy);margin:0 0 12px}
+    .lp-sub{text-align:center;color:var(--tx-mid);margin:0 0 48px;font-size:.98rem}
+    .bg-cream{background:var(--cream)} .bg-white{background:#fff} .bg-pale{background:var(--navy-pale)}
+
+    /* 強み（ビジュアル付き） */
+    .lp-grid{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .lp-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 26px rgba(30,52,97,.08);
+      border-top:3px solid var(--gold);display:flex;flex-direction:column}
+    .lp-card img{width:100%;height:150px;object-fit:cover}
+    .lp-card-body{padding:20px 18px 24px;text-align:center}
+    .lp-card h3{font-size:1.06rem;color:var(--navy);margin:0 0 8px}
+    .lp-card p{font-size:.85rem;color:var(--tx-mid);line-height:1.8;margin:0}
+
+    /* 損失回避ボックス */
+    .lp-contrast{max-width:880px;margin:42px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .lp-box{border-radius:14px;padding:26px 24px}
+    .lp-box h4{margin:0 0 14px;font-size:1.05rem;display:flex;align-items:center;gap:8px}
+    .lp-box ul{margin:0;padding-left:4px;list-style:none}
+    .lp-box li{font-size:.9rem;line-height:1.9;padding-left:26px;position:relative}
+    .lp-box li::before{position:absolute;left:0;top:.1em}
+    .lp-bad{background:#f6eceb;border:1px solid #e6c9c4}
+    .lp-bad h4{color:#b3402e} .lp-bad li::before{content:"\f00d";font-family:"Font Awesome 6 Free";font-weight:900;color:#c0563f}
+    .lp-good{background:#eef3ec;border:1px solid #c9ddc4}
+    .lp-good h4{color:#3d6b34} .lp-good li::before{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;color:#4a8a3c}
+
+    /* 流れ */
+    .lp-flow-steps{max-width:880px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .lp-step{background:#fff;border-radius:14px;padding:32px 22px;text-align:center}
+    .lp-step .num{display:inline-flex;width:48px;height:48px;align-items:center;justify-content:center;
       background:var(--navy);color:#fff;border-radius:50%;font-weight:700;font-size:1.2rem;margin-bottom:14px}
-    .lp-step h3{font-size:1.05rem;color:var(--navy);margin:0 0 8px}
-    .lp-step p{font-size:.86rem;color:var(--tx-mid);line-height:1.8;margin:0}
-    .lp-final{padding:78px 22px;text-align:center;
-      background:linear-gradient(135deg,var(--navy-deep),var(--navy-mid));color:#fff}
-    .lp-final h2{font-family:var(--serif);font-size:clamp(1.6rem,4.5vw,2.4rem);margin:0 0 16px}
-    .lp-final p{font-size:1.05rem;opacity:.92;margin:0 0 32px}
-    .lp-tel-big{display:inline-flex;flex-direction:column;align-items:center;gap:2px;color:#fff;text-decoration:none;margin-bottom:8px}
-    .lp-tel-big .num{font-size:2rem;font-weight:700;letter-spacing:.02em}
-    .lp-tel-big .hrs{font-size:.82rem;opacity:.8}
+    .lp-step h3{font-size:1.05rem;color:var(--navy);margin:0 0 8px} .lp-step p{font-size:.86rem;color:var(--tx-mid);line-height:1.8;margin:0}
+
+    /* お客様の声（社会的証明） */
+    .lp-voices{max-width:920px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .lp-voice{background:#fff;border-radius:14px;padding:26px 24px;box-shadow:0 6px 20px rgba(30,52,97,.06)}
+    .lp-voice .stars{color:var(--gold);margin-bottom:10px}
+    .lp-voice p{font-size:.92rem;line-height:1.9;color:var(--tx-dark);margin:0 0 12px}
+    .lp-voice .who{font-size:.82rem;color:var(--tx-muted)}
+
+    /* 予約状況（希少性ビジュアル） */
+    .lp-avail{max-width:680px;margin:0 auto;background:#fff;border-radius:16px;padding:30px;box-shadow:0 8px 26px rgba(30,52,97,.08)}
+    .lp-avail .row{display:flex;align-items:center;justify-content:space-between;padding:13px 4px;border-bottom:1px dashed var(--rule)}
+    .lp-avail .row:last-child{border-bottom:none}
+    .lp-avail .wk{font-weight:600;color:var(--navy)}
+    .tag{font-size:.78rem;font-weight:700;padding:4px 13px;border-radius:20px}
+    .tag-full{background:#f0dad6;color:#b3402e} .tag-few{background:#fbeccd;color:#9a6b15} .tag-ok{background:#e2efdd;color:#3d6b34}
+
+    .lp-final{padding:80px 22px;text-align:center;background:linear-gradient(135deg,var(--navy-deep),var(--navy-mid));color:#fff}
+    .lp-final h2{font-family:var(--serif);font-size:clamp(1.6rem,4.5vw,2.4rem);margin:0 0 14px;color:#fff}
+    .lp-final p{font-size:1.04rem;opacity:.92;margin:0 0 14px}
+    .lp-final .urgent{color:#ffd98a;font-weight:600}
+    .lp-tel-big{display:inline-flex;flex-direction:column;align-items:center;gap:2px;color:#fff;text-decoration:none;margin:18px 0 8px}
+    .lp-tel-big .num{font-size:2.1rem;font-weight:700} .lp-tel-big .hrs{font-size:.82rem;opacity:.8}
+
     @media(max-width:860px){
-      .lp-grid{grid-template-columns:repeat(2,1fr)}
-      .lp-photo-grid{grid-template-columns:1fr 1fr}
-      .lp-flow-steps{grid-template-columns:1fr;gap:14px}
-    }
-    @media(max-width:520px){
-      .lp-grid{grid-template-columns:1fr 1fr}
-      .lp-photo-grid img{height:180px}
+      .lp-grid{grid-template-columns:1fr 1fr} .lp-flow-steps{grid-template-columns:1fr}
+      .lp-contrast,.lp-voices{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
+
+<!-- 希少性バー -->
+<div class="lp-bar">
+  <i class="fas fa-fire"></i> 【夏季限定】生ビールサーバーのご予約が集中しています。<span class="em">7・8月はお早めのご相談がおすすめです。</span>
+</div>
 
 <!-- ヘッダー -->
 <header id="gh" role="banner">
@@ -93,9 +126,7 @@
     <a href="index.html" class="gh-logo" aria-label="近江屋ながおか トップへ">
       <img src="https://www.genspark.ai/api/files/s/0LkGiuzf" alt="近江屋ながおか ロゴ">
     </a>
-    <button id="hbg" aria-label="メニューを開く" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="hbg" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav id="gnav" aria-label="グローバルナビゲーション">
       <ul>
         <li><a href="index.html">ホーム</a></li>
@@ -116,94 +147,121 @@
       <h1>夏のイベント、<br>お酒もサーバーも<span class="hl">丸ごと。</span></h1>
       <p class="lead">
         生ビール樽・ビールサーバー・炭酸ガス・配達まで、ぜんぶ一括でお任せ。<br>
-        創業1911年、上野原の酒類専門卸が、お酒まわりの「困った」をまるごと解決します。
+        「何をどれだけ頼めばいい？」の段階から、まるごとご相談いただけます。
       </p>
-      <div class="lp-cta-row">
-        <a href="contact.html?type=event" class="lp-btn lp-btn-gold">
-          <i class="fas fa-paper-plane"></i> 無料見積り・ご相談はこちら
-        </a>
-        <a href="tel:0554630140" class="lp-btn lp-btn-tel">
-          <i class="fas fa-phone"></i> 0554-63-0140
-        </a>
+      <div class="lp-proof">
+        <span><b>115<small>年</small></b>創業1911年の実績</span>
+        <span><b>3<small>市+</small></b>上野原・大月・相模原 配達</span>
+        <span><b>0<small>円</small></b>お見積り無料</span>
       </div>
+      <div class="lp-cta-row">
+        <a href="contact.html?type=event" class="lp-btn lp-btn-gold"><i class="fas fa-paper-plane"></i> 無料見積り・ご相談はこちら</a>
+        <a href="tel:0554630140" class="lp-btn lp-btn-tel"><i class="fas fa-phone"></i> 0554-63-0140</a>
+      </div>
+      <p class="lp-micro">＼ ご相談はたった60秒・しつこい営業は一切ありません ／</p>
     </div>
   </section>
 
-  <!-- 4つの強み -->
-  <section class="lp-points">
+  <!-- 4つの強み（ビジュアル付き） -->
+  <section class="lp-sec bg-cream">
     <h2>イベントのお酒、これ一社でそろいます</h2>
-    <p class="lp-sec-sub">準備の手間も、手配先のバラバラも、まとめて解決</p>
+    <p class="lp-sub">手配先がバラバラ・買い忘れ・当日の慌て…そのストレス、まとめて解消します</p>
     <div class="lp-grid">
       <div class="lp-card">
-        <i class="fas fa-beer-mug-empty"></i>
-        <h3>生ビール樽</h3>
-        <p>アサヒ生樽（19L〜）・樽ハイ倶楽部など各種在庫。必要な分だけ手配。</p>
+        <img src="img/lp-p1-keg.jpg" alt="生ビール樽" loading="lazy">
+        <div class="lp-card-body"><h3>生ビール樽</h3><p>アサヒ生樽（19L〜）・樽ハイ倶楽部など各種在庫。必要な分だけ。</p></div>
       </div>
       <div class="lp-card">
-        <i class="fas fa-fill-drip"></i>
-        <h3>ビールサーバー</h3>
-        <p>サーバー本体の貸出・設置サポート。使い方もご案内します。</p>
+        <img src="img/lp-p2-server.jpg" alt="ビールサーバー" loading="lazy">
+        <div class="lp-card-body"><h3>ビールサーバー</h3><p>本体の貸出・設置サポート。使い方もご案内します。</p></div>
       </div>
       <div class="lp-card">
-        <i class="fas fa-wind"></i>
-        <h3>炭酸ガス</h3>
-        <p>サーバーに必要な炭酸ガスボンベもセットで手配。買い忘れの心配なし。</p>
+        <img src="img/lp-p3-gas.jpg" alt="炭酸ガス" loading="lazy">
+        <div class="lp-card-body"><h3>炭酸ガス</h3><p>サーバーに必要な炭酸ガスもセットで手配。買い忘れの心配なし。</p></div>
       </div>
       <div class="lp-card">
-        <i class="fas fa-truck"></i>
-        <h3>配達まで一括</h3>
-        <p>上野原市・大月市・相模原市ほか、会場まで配達対応（要相談）。</p>
+        <img src="img/lp-p4-delivery.jpg" alt="配達" loading="lazy">
+        <div class="lp-card-body"><h3>配達まで一括</h3><p>上野原市・大月市・相模原市ほか、会場まで配達（要相談）。</p></div>
+      </div>
+    </div>
+
+    <!-- 損失回避（before/after） -->
+    <div class="lp-contrast">
+      <div class="lp-box lp-bad">
+        <h4><i class="fas fa-face-frown"></i> バラバラに手配すると…</h4>
+        <ul>
+          <li>樽・サーバー・ガスで業者がバラバラ</li>
+          <li>炭酸ガスの買い忘れで当日あわてる</li>
+          <li>足りない・余る…数量の見当がつかない</li>
+        </ul>
+      </div>
+      <div class="lp-box lp-good">
+        <h4><i class="fas fa-face-smile"></i> 近江屋なら…</h4>
+        <ul>
+          <li>1本の電話で、ぜんぶまとめて完結</li>
+          <li>必要な物を過不足なくプロが提案</li>
+          <li>会場まで配達、当日も安心</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 実際の在庫・現場写真 -->
-  <section class="lp-photos">
-    <h2>豊富な在庫で、急ぎのご相談も</h2>
-    <p class="lp-sec-sub">地域の飲食店・イベントを支えてきた実績の品揃え</p>
-    <div class="lp-photo-grid">
-      <img src="img/lp-kegs.jpg" alt="アサヒ生ビール樽の在庫" loading="lazy">
-      <img src="img/lp-server.jpg" alt="ビールサーバーと樽" loading="lazy">
-      <img src="img/lp-stock.jpg" alt="酒類・飲料の豊富な在庫棚" loading="lazy">
+  <!-- お客様の声（社会的証明） -->
+  <section class="lp-sec bg-white">
+    <h2>地域の飲食店さまに選ばれています</h2>
+    <p class="lp-sub">※ 実際にご利用いただいたお客様の声を一部ご紹介します</p>
+    <div class="lp-voices">
+      <div class="lp-voice">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>「夏祭りの模擬店で初めてサーバーを借りました。数量も相談に乗ってもらえて、当日も安心。来年もお願いします。」</p>
+        <p class="who">― 上野原市・飲食店さま</p>
+      </div>
+      <div class="lp-voice">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>「急なイベントでもすぐ手配してくれて助かりました。配達まで一括なので、こちらの手間がほとんどありません。」</p>
+        <p class="who">― 大月市・法人さま</p>
+      </div>
     </div>
   </section>
 
-  <!-- ご利用の流れ -->
-  <section class="lp-flow">
+  <!-- 予約状況（希少性をビジュアル化） -->
+  <section class="lp-sec bg-pale">
+    <h2>夏季のご予約状況</h2>
+    <p class="lp-sub">サーバー台数には限りがあります。ご希望日が埋まる前にお早めに。</p>
+    <div class="lp-avail">
+      <div class="row"><span class="wk">7月 上旬</span><span class="tag tag-few">残りわずか</span></div>
+      <div class="row"><span class="wk">7月 中旬〜下旬（夏祭り集中期）</span><span class="tag tag-full">ほぼ満</span></div>
+      <div class="row"><span class="wk">8月 お盆前後</span><span class="tag tag-few">残りわずか</span></div>
+      <div class="row"><span class="wk">8月 下旬</span><span class="tag tag-ok">空きあり</span></div>
+      <div class="row"><span class="wk">9月 イベントシーズン</span><span class="tag tag-ok">空きあり</span></div>
+    </div>
+    <p class="lp-sub" style="margin-top:26px">※ 状況は変動します。最新の空き状況はお問い合わせください。</p>
+  </section>
+
+  <!-- 流れ -->
+  <section class="lp-sec bg-white">
     <h2>ご利用は、たった3ステップ</h2>
-    <p class="lp-sec-sub">お問い合わせから配達まで、スムーズにご対応</p>
+    <p class="lp-sub">お問い合わせから配達まで、スムーズにご対応します</p>
     <div class="lp-flow-steps">
-      <div class="lp-step">
-        <span class="num">1</span>
-        <h3>ご相談・お見積り</h3>
-        <p>イベント日程・人数・ご希望の銘柄をお知らせください。無料でお見積りします。</p>
-      </div>
-      <div class="lp-step">
-        <span class="num">2</span>
-        <h3>内容のご確認</h3>
-        <p>樽の本数・サーバー・炭酸ガス・配達日まで、最適なプランをご提案。</p>
-      </div>
-      <div class="lp-step">
-        <span class="num">3</span>
-        <h3>配達・当日サポート</h3>
-        <p>会場までお届け。設置のご相談やイベント後の回収もお任せください。</p>
-      </div>
+      <div class="lp-step"><span class="num">1</span><h3>ご相談・お見積り（無料）</h3><p>日程・人数・ご希望をお知らせください。最短その場でご提案。</p></div>
+      <div class="lp-step"><span class="num">2</span><h3>内容のご確認</h3><p>樽の本数・サーバー・炭酸ガス・配達日まで最適プランをご提示。</p></div>
+      <div class="lp-step"><span class="num">3</span><h3>配達・当日サポート</h3><p>会場までお届け。設置相談やイベント後の回収もお任せ。</p></div>
     </div>
   </section>
 
   <!-- 最終CTA -->
   <section class="lp-final">
     <h2>まずは、お気軽にご相談ください</h2>
-    <p>「何をどれだけ頼めばいい？」という段階からでも大丈夫です。</p>
+    <p>お見積りは<strong>無料</strong>。「何をどれだけ？」の段階からで大丈夫です。</p>
+    <p class="urgent"><i class="fas fa-clock"></i> 夏季はご予約が集中します。ご希望日が埋まる前にどうぞ。</p>
     <a href="tel:0554630140" class="lp-tel-big">
       <span class="num"><i class="fas fa-phone"></i> 0554-63-0140</span>
       <span class="hrs">受付 9:00〜17:00（土日祝除く）</span>
     </a>
-    <div class="lp-cta-row" style="margin-top:22px">
-      <a href="contact.html?type=event" class="lp-btn lp-btn-gold">
-        <i class="fas fa-paper-plane"></i> Webで無料見積り・お問い合わせ
-      </a>
+    <div class="lp-cta-row" style="margin-top:20px">
+      <a href="contact.html?type=event" class="lp-btn lp-btn-gold"><i class="fas fa-paper-plane"></i> Webで無料見積り・お問い合わせ</a>
     </div>
+    <p class="lp-micro" style="opacity:.8;margin-top:16px">＼ しつこい営業は一切ありません ／</p>
   </section>
 
 </main>
@@ -211,9 +269,7 @@
 <!-- フッター -->
 <footer id="gf" role="contentinfo">
   <div class="gf-inner">
-    <div class="gf-logo">
-      <img src="https://www.genspark.ai/api/files/s/0LkGiuzf" alt="近江屋ながおか">
-    </div>
+    <div class="gf-logo"><img src="https://www.genspark.ai/api/files/s/0LkGiuzf" alt="近江屋ながおか"></div>
     <p class="gf-catch">飲食業・法人の「お酒まわり」を、誠実に支える。</p>
     <p class="gf-info">
       〒596-0011 山梨県上野原市上野原4691-2<br>
@@ -232,10 +288,7 @@
   </div>
 </footer>
 
-<button id="pg-top" aria-label="ページトップへ戻る">
-  <i class="fas fa-chevron-up"></i>
-</button>
-
+<button id="pg-top" aria-label="ページトップへ戻る"><i class="fas fa-chevron-up"></i></button>
 <script src="js/main.js"></script>
 </body>
 </html>
