@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="夏のイベント・宴会のお酒、近江屋ながおかにまるごとお任せ。生ビール樽・ビールサーバー・炭酸ガス・配達まで一括手配。上野原市・大月市・相模原市の飲食店・法人さまへ。創業1911年の酒類専門卸。">
+  <title>夏のイベント、お酒もサーバーも丸ごと｜近江屋ながおか</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+  <!-- Canonical & Social (SEO) -->
+  <link rel="canonical" href="https://oumiyanagaoka.com/lp-event.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="近江屋ながおか">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="夏のイベント、お酒もサーバーも丸ごと｜近江屋ながおか">
+  <meta property="og:description" content="生ビール樽・サーバー・炭酸ガス・配達まで一括手配。上野原の酒類専門卸が、飲食店・イベントのお酒まわりをまるごとサポート。">
+  <meta property="og:url" content="https://oumiyanagaoka.com/lp-event.html">
+  <meta property="og:image" content="https://oumiyanagaoka.com/img/lp-kegs-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ── LP 専用スタイル ── */
+    .lp-hero{position:relative;min-height:88vh;display:flex;align-items:center;
+      background:linear-gradient(rgba(15,29,56,.62),rgba(15,29,56,.72)),url('img/lp-kegs.jpg') center/cover no-repeat;color:#fff;text-align:center}
+    .lp-hero-inner{max-width:880px;margin:0 auto;padding:90px 22px}
+    .lp-eyebrow{display:inline-block;background:var(--gold);color:#1b2a4a;font-weight:700;
+      font-size:.82rem;letter-spacing:.08em;padding:7px 18px;border-radius:30px;margin-bottom:24px}
+    .lp-hero h1{font-family:var(--serif);font-size:clamp(2rem,6vw,3.4rem);line-height:1.4;
+      font-weight:700;margin:0 0 22px;text-shadow:0 2px 18px rgba(0,0,0,.4)}
+    .lp-hero h1 .hl{color:var(--gold-lt)}
+    .lp-hero p.lead{font-size:clamp(1rem,2.4vw,1.22rem);line-height:1.9;margin:0 auto 38px;max-width:640px;opacity:.96}
+    .lp-cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .lp-btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem;
+      padding:17px 34px;border-radius:9px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+    .lp-btn-gold{background:var(--gold);color:#1b2a4a;box-shadow:0 8px 24px rgba(200,150,60,.4)}
+    .lp-btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(200,150,60,.5)}
+    .lp-btn-tel{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+    .lp-btn-tel:hover{background:rgba(255,255,255,.2)}
+    .lp-points{padding:70px 22px;background:var(--cream)}
+    .lp-points h2,.lp-flow h2,.lp-photos h2{text-align:center;font-family:var(--serif);
+      font-size:clamp(1.5rem,4vw,2.1rem);color:var(--navy);margin:0 0 12px}
+    .lp-sec-sub{text-align:center;color:var(--tx-mid);margin:0 0 46px}
+    .lp-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .lp-card{background:#fff;border-radius:14px;padding:30px 20px;text-align:center;
+      box-shadow:0 6px 22px rgba(30,52,97,.07);border-top:3px solid var(--gold)}
+    .lp-card i{font-size:2.1rem;color:var(--navy-mid);margin-bottom:16px}
+    .lp-card h3{font-size:1.05rem;color:var(--navy);margin:0 0 8px}
+    .lp-card p{font-size:.86rem;color:var(--tx-mid);line-height:1.8;margin:0}
+    .lp-photos{padding:60px 22px;background:#fff}
+    .lp-photo-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .lp-photo-grid img{width:100%;height:240px;object-fit:cover;border-radius:12px}
+    .lp-flow{padding:70px 22px;background:var(--navy-pale)}
+    .lp-flow-steps{max-width:860px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .lp-step{background:#fff;border-radius:14px;padding:30px 22px;text-align:center;position:relative}
+    .lp-step .num{display:inline-flex;width:46px;height:46px;align-items:center;justify-content:center;
+      background:var(--navy);color:#fff;border-radius:50%;font-weight:700;font-size:1.2rem;margin-bottom:14px}
+    .lp-step h3{font-size:1.05rem;color:var(--navy);margin:0 0 8px}
+    .lp-step p{font-size:.86rem;color:var(--tx-mid);line-height:1.8;margin:0}
+    .lp-final{padding:78px 22px;text-align:center;
+      background:linear-gradient(135deg,var(--navy-deep),var(--navy-mid));color:#fff}
+    .lp-final h2{font-family:var(--serif);font-size:clamp(1.6rem,4.5vw,2.4rem);margin:0 0 16px}
+    .lp-final p{font-size:1.05rem;opacity:.92;margin:0 0 32px}
+    .lp-tel-big{display:inline-flex;flex-direction:column;align-items:center;gap:2px;color:#fff;text-decoration:none;margin-bottom:8px}
+    .lp-tel-big .num{font-size:2rem;font-weight:700;letter-spacing:.02em}
+    .lp-tel-big .hrs{font-size:.82rem;opacity:.8}
+    @media(max-width:860px){
+      .lp-grid{grid-template-columns:repeat(2,1fr)}
+      .lp-photo-grid{grid-template-columns:1fr 1fr}
+      .lp-flow-steps{grid-template-columns:1fr;gap:14px}
+    }
+    @media(max-width:520px){
+      .lp-grid{grid-template-columns:1fr 1fr}
+      .lp-photo-grid img{height:180px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header id="gh" role="banner">
+  <div class="gh-inner">
+    <a href="index.html" class="gh-logo" aria-label="近江屋ながおか トップへ">
+      <img src="https://www.genspark.ai/api/files/s/0LkGiuzf" alt="近江屋ながおか ロゴ">
+    </a>
+    <button id="hbg" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="gnav" aria-label="グローバルナビゲーション">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="services.html">サービス</a></li>
+        <li><a href="about.html">会社概要</a></li>
+        <li><a href="contact.html" class="gnav-cta"><i class="fas fa-envelope"></i> お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ヒーロー -->
+  <section class="lp-hero">
+    <div class="lp-hero-inner">
+      <span class="lp-eyebrow">飲食店・イベント主催者さまへ</span>
+      <h1>夏のイベント、<br>お酒もサーバーも<span class="hl">丸ごと。</span></h1>
+      <p class="lead">
+        生ビール樽・ビールサーバー・炭酸ガス・配達まで、ぜんぶ一括でお任せ。<br>
+        創業1911年、上野原の酒類専門卸が、お酒まわりの「困った」をまるごと解決します。
+      </p>
+      <div class="lp-cta-row">
+        <a href="contact.html?type=event" class="lp-btn lp-btn-gold">
+          <i class="fas fa-paper-plane"></i> 無料見積り・ご相談はこちら
+        </a>
+        <a href="tel:0554630140" class="lp-btn lp-btn-tel">
+          <i class="fas fa-phone"></i> 0554-63-0140
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4つの強み -->
+  <section class="lp-points">
+    <h2>イベントのお酒、これ一社でそろいます</h2>
+    <p class="lp-sec-sub">準備の手間も、手配先のバラバラも、まとめて解決</p>
+    <div class="lp-grid">
+      <div class="lp-card">
+        <i class="fas fa-beer-mug-empty"></i>
+        <h3>生ビール樽</h3>
+        <p>アサヒ生樽（19L〜）・樽ハイ倶楽部など各種在庫。必要な分だけ手配。</p>
+      </div>
+      <div class="lp-card">
+        <i class="fas fa-fill-drip"></i>
+        <h3>ビールサーバー</h3>
+        <p>サーバー本体の貸出・設置サポート。使い方もご案内します。</p>
+      </div>
+      <div class="lp-card">
+        <i class="fas fa-wind"></i>
+        <h3>炭酸ガス</h3>
+        <p>サーバーに必要な炭酸ガスボンベもセットで手配。買い忘れの心配なし。</p>
+      </div>
+      <div class="lp-card">
+        <i class="fas fa-truck"></i>
+        <h3>配達まで一括</h3>
+        <p>上野原市・大月市・相模原市ほか、会場まで配達対応（要相談）。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 実際の在庫・現場写真 -->
+  <section class="lp-photos">
+    <h2>豊富な在庫で、急ぎのご相談も</h2>
+    <p class="lp-sec-sub">地域の飲食店・イベントを支えてきた実績の品揃え</p>
+    <div class="lp-photo-grid">
+      <img src="img/lp-kegs.jpg" alt="アサヒ生ビール樽の在庫" loading="lazy">
+      <img src="img/lp-server.jpg" alt="ビールサーバーと樽" loading="lazy">
+      <img src="img/lp-stock.jpg" alt="酒類・飲料の豊富な在庫棚" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ご利用の流れ -->
+  <section class="lp-flow">
+    <h2>ご利用は、たった3ステップ</h2>
+    <p class="lp-sec-sub">お問い合わせから配達まで、スムーズにご対応</p>
+    <div class="lp-flow-steps">
+      <div class="lp-step">
+        <span class="num">1</span>
+        <h3>ご相談・お見積り</h3>
+        <p>イベント日程・人数・ご希望の銘柄をお知らせください。無料でお見積りします。</p>
+      </div>
+      <div class="lp-step">
+        <span class="num">2</span>
+        <h3>内容のご確認</h3>
+        <p>樽の本数・サーバー・炭酸ガス・配達日まで、最適なプランをご提案。</p>
+      </div>
+      <div class="lp-step">
+        <span class="num">3</span>
+        <h3>配達・当日サポート</h3>
+        <p>会場までお届け。設置のご相談やイベント後の回収もお任せください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最終CTA -->
+  <section class="lp-final">
+    <h2>まずは、お気軽にご相談ください</h2>
+    <p>「何をどれだけ頼めばいい？」という段階からでも大丈夫です。</p>
+    <a href="tel:0554630140" class="lp-tel-big">
+      <span class="num"><i class="fas fa-phone"></i> 0554-63-0140</span>
+      <span class="hrs">受付 9:00〜17:00（土日祝除く）</span>
+    </a>
+    <div class="lp-cta-row" style="margin-top:22px">
+      <a href="contact.html?type=event" class="lp-btn lp-btn-gold">
+        <i class="fas fa-paper-plane"></i> Webで無料見積り・お問い合わせ
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- フッター -->
+<footer id="gf" role="contentinfo">
+  <div class="gf-inner">
+    <div class="gf-logo">
+      <img src="https://www.genspark.ai/api/files/s/0LkGiuzf" alt="近江屋ながおか">
+    </div>
+    <p class="gf-catch">飲食業・法人の「お酒まわり」を、誠実に支える。</p>
+    <p class="gf-info">
+      〒596-0011 山梨県上野原市上野原4691-2<br>
+      TEL: 0554-63-0140　受付 9:00〜17:00<br>
+      代表：長岡賢伍　創業：1911年（創業115年）
+    </p>
+    <nav class="gf-nav" aria-label="フッターナビゲーション">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="services.html">サービス</a></li>
+        <li><a href="about.html">会社概要</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    <p class="gf-copy">© 2025 近江屋ながおか. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<button id="pg-top" aria-label="ページトップへ戻る">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
