@@ -157,7 +157,9 @@
     <!-- 右：フォーム -->
     <div class="contact-form-wrap fade fade-d2">
       <div class="form-card">
-        <form id="contact-form" novalidate>
+        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><label>この欄は空のままにしてください: <input name="bot-field"></label></p>
 
           <div class="form-2col">
             <div class="form-row">
@@ -189,6 +191,8 @@
               <option value="event">イベント・宴会のお酒提案</option>
               <option value="rental">機材・器具の貸出</option>
               <option value="regular">定期仕入れ・継続取引</option>
+              <option value="gift">法人ギフト（お中元・お歳暮）</option>
+              <option value="original">オリジナル名入れ・販促品制作</option>
               <option value="other">その他</option>
             </select>
           </div>

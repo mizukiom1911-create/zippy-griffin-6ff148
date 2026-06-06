@@ -101,18 +101,13 @@
       sub.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中…';
 
       try{
-        const payload = {
-          company:      (form.company?.value||'').trim(),
-          name:         (form.name?.value||'').trim(),
-          phone:        (form.phone?.value||'').trim(),
-          email:        (emailEl?.value||'').trim(),
-          inquiry_type: (form['inquiry-type']?.value||''),
-          message:      (form.message?.value||'').trim(),
-          submitted_at: new Date().toISOString()
-        };
-        const res = await fetch('tables/inquiries',{
-          method:'POST',headers:{'Content-Type':'application/json'},
-          body:JSON.stringify(payload)
+        // Netlify Forms へ送信（form-urlencoded。form-name 必須）
+        const data = new FormData(form);
+        const body = new URLSearchParams(data).toString();
+        const res = await fetch('/',{
+          method:'POST',
+          headers:{'Content-Type':'application/x-www-form-urlencoded'},
+          body
         });
         if(!res.ok) throw new Error('HTTP '+res.status);
         showMsg('ok','お問い合わせを受け付けました。担当者よりご連絡いたします。');
