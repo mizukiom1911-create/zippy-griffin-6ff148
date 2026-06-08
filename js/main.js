@@ -101,13 +101,12 @@
       sub.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中…';
 
       try{
-        // Netlify Forms へ送信（form-urlencoded。form-name 必須）
+        // Formspree へ AJAX 送信（送信後もページ内に留まり、独自メッセージを表示）
         const data = new FormData(form);
-        const body = new URLSearchParams(data).toString();
-        const res = await fetch('/',{
+        const res = await fetch(form.action,{
           method:'POST',
-          headers:{'Content-Type':'application/x-www-form-urlencoded'},
-          body
+          headers:{'Accept':'application/json'},
+          body:data
         });
         if(!res.ok) throw new Error('HTTP '+res.status);
         showMsg('ok','お問い合わせを受け付けました。担当者よりご連絡いたします。');
